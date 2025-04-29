@@ -19,3 +19,53 @@ function checkData() {
     }
   }
 }
+
+
+
+
+// function isPrime(num){
+//     if(num < 2){
+//         return false;
+//     }
+
+//     for (let i = 2; i < num; i++ ){
+//         if (num % 2 == 0){
+//             return false;
+//         }
+//     }
+
+//     return true
+// }
+
+// let start = 50;
+// let end = 100;
+
+// for (let i = start; i <= end; i++){
+//     if(isPrime(i)){
+//         console.log(`${i}is prime number!`)
+//     }else{
+//         console.log(`${i}is not prime number!`)
+//     }
+// }
+
+let start = 10;
+let end = 90;
+
+for(let i = start; i<=end; i++){
+
+    let num = i;
+    let count = 0;
+    
+    for (let i = 1; i <= num; i++){
+        if(num % i == 0){
+            count++;
+        }
+    }
+    
+    
+    if (count === 2){
+        console.log(`${num} is prime number!`);
+    }
+}
+
+
