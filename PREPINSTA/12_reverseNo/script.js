@@ -1,35 +1,35 @@
 // without function
 
-// let num = 1234;
+let num = 1234;
 
-// let reverse = 0;
+let reverse = 0;
 
-// while(num>0){
-//     let digit = num%10;
-//     reverse = reverse*10 +digit;
-//     num = Math.floor(num/10);
-// }
+while(num>0){
+    let digit = num%10;
+    reverse = reverse*10 +digit;
+    num = Math.floor(num/10);
+}
 
-// console.log(reverse);
+console.log(reverse);
 
 // with function
 
-function reverseNumber(number) {
-  let reverse = 0;
-  let num = Math.abs(number);
+// function reverseNumber(number) {
+//   let reverse = 0;
+//   let num = Math.abs(number);
 
-  while (num > 0) {
-    let digit = num % 10;
-    reverse = reverse * 10 + digit;
-    num = Math.floor(num / 10);
-  }
+//   while (num > 0) {
+//     let digit = num % 10;
+//     reverse = reverse * 10 + digit;
+//     num = Math.floor(num / 10);
+//   }
 
-  return reverse;
-}
+//   return reverse;
+// }
 
-let input = 12345;
+// let input = 12345;
 
-console.log("input: ",input)
-let rev = reverseNumber(input);
+// console.log("input: ",input)
+// let rev = reverseNumber(input);
 
-console.log("reverse: ",rev)
+// console.log("reverse: ",rev)
