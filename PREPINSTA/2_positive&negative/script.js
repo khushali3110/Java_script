@@ -14,12 +14,12 @@ function checkSum() {
 
 
 
-// let k = 0;
+let k = 0;
 
-// if (k > 0){
-//     console.log (`${k} is positive number`)
-// }else if (k < 0){
-//     console.log (`${k} is negative number`)
-// }else{
-//     console.log (`${k} is nutral number`)
-// }
+if (k > 0){
+    console.log (`${k} is positive number`)
+}else if (k < 0){
+    console.log (`${k} is negative number`)
+}else{
+    console.log (`${k} is nutral number`)
+}

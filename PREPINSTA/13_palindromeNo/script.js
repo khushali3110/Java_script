@@ -32,6 +32,7 @@ let rev = 0;
     rev = rev * 10 + digit;
     num1 = Math.floor(num1 / 10);
   }
+  
     
 
   if (rev === originalNum) {

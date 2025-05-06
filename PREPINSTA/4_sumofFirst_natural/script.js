@@ -23,11 +23,11 @@
 // }
 
 
-// let k = 10;
-// let sum = 0;
+let k = 10;
+let sum = 0;
 
-// for (let i = 1; i <= 10; i++){
-//    sum += i;
-// }
+for (let i = 1; i <= 10; i++){
+   sum += i;
+}
 
-// console.log(`total sum : ${sum}`)
+console.log(`total sum : ${sum}`)

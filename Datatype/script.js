@@ -143,3 +143,68 @@ Important Points:
    // {
    //   console.log(num);
    // }
+
+
+
+
+
+//    let marks = 60; // Change this value to test different marks
+
+// if (marks >= 90 && marks <= 100) {
+//   console.log("Grade: A+");
+// } else if (marks >= 80 && marks < 90) {
+//   console.log("Grade: A");
+// } else if (marks >= 70 && marks < 80) {
+//   console.log("Grade: B");
+// } else if (marks >= 60 && marks < 70) {
+//   console.log("Grade: C");
+// } else if (marks >= 50 && marks < 60) {
+//   console.log("Grade: D");
+// } else if (marks >= 0 && marks < 50) {
+//   console.log("Grade: F (Fail)");
+// } else {
+//   console.log("Invalid marks. Please enter a value between 0 and 100.");
+// }
+
+
+// swapping method
+
+// let x = 10;
+// let y = 60;
+
+// [x , y] = [y , x]
+
+// console.log(x);
+// console.log(y);
+
+
+// simple intrest
+
+// let p = 2000;
+// let t = 10;
+// let r = 2;
+
+// let si = (p*t*r)/100;
+// console.log(si);
+
+
+// simple bill
+
+// let price = 100;
+// let quantity = 3;
+// let tax = 10;
+
+// let total = (price * quantity ) + tax ;
+
+// console.log(total);
+
+
+
+// employee salary 
+let basic = 20000;
+let bonus = 2000;
+let tax = 1000;
+
+let salary = basic + bonus - tax;
+
+console.log(salary);

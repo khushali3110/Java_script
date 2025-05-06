@@ -26,9 +26,10 @@
 
 
 // n *(n+1)/2 formula
-// let x = 2;
 
-// for (let i =1 ;  i <= x; i++){
-//   result= x*(x+1)/2
-// }
-// console.log(result)
+let x = 2;
+
+for (let i =1 ;  i <= x; i++){
+  result= x*(x+1)/2
+}
+console.log(result)

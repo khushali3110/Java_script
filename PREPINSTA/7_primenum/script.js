@@ -32,7 +32,7 @@ for (let i = 1; i <= num; i++){
 }
 
 
-if (count === 2){
+if (count == 2){
     console.log(`${num} is prime number!`);
 }else{
     console.log(`${num} is not prime number!`);
