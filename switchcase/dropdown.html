@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+
+    <form class="mx-auto w-50 mt-5 shadow alert alert-primary">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">value1</label>
+            <input type="number" class="form-control" id="value1" placeholder="value1">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">value2</label>
+            <input type="number" class="form-control" id="value2" placeholder="value2">
+        </div>
+
+        <div class="text-center mb-3 mt-5">
+            <select id="drop" onchange="calc()" class="alert alert-light">
+                <option value = "">DROPDOWN</option>
+                <option value = "1">+</option>
+                <option value = "2">-</option>
+                <option value = "3">*</option>
+                <option value = "4">/</option>
+                <option value = "5">%</option>
+                
+            </select>
+        </div>
+
+
+        <div id="ack"></div>
+
+    </form>
+
+    <script src="./drop.js"></script>
+</body>
+
+</html>
