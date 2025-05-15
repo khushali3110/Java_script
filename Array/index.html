@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1]
+        console.log(arr.push(22));      //22
+        console.log(arr)                // 1,22
+
+
+        console.log(arr.push(100)); 
+        console.log(arr);                //1,22,100
+
+
+        arr.push(101,102,103)
+        console.log(arr);                //1,22,100,101,102,103
+
+
+        console.log(arr.pop());        //103  remove
+        arr.pop()
+        console.log(arr);               //1,22,100,101
+
+
+        arr.shift()
+        console.log(arr);               //22,100,101
+
+
+        arr.unshift("start")       
+        console.log(arr);                //start,22,100,101
+
+
+        arr.unshift("end")
+        console.log(arr);               //end,start,22,100,101
+
+
+        arr.unshit("first","second")
+        console.log(arr);               // first,seconnd,end,start,22,100,101
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
