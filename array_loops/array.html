@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for loop
+        console.log("for loop..............");
+        
+        let arr = [11 , 22 , 33 , 44]
+         for(let i = 0; i < arr.length; i++){
+            console.log(arr[i])
+         }
+
+        console.log("for of..............");
+
+
+        //  for of array
+         for(let ele of arr){
+            console.log(ele);
+         }
+
+        //  for in (index)
+         for(let index of arr){
+            console.log(index);
+         }
+
+
+        //  forEach() array mostily use
+            arr.forEach( (ele) => {
+                console.log(ele);   
+            })
+
+
+            // annomeyous fun
+            arr1 = [25,45,66,45,12]
+            arr1.forEach(function (ele){
+                console.log(ele);
+            })
+
+            // arrow fun
+            arr2 = [11,54,23,44]
+            const show = (ele) => {
+                console.log(ele);
+            }
+                arr2.forEach(show)
+            
+
+
+ // array function
+            // map
+            arr3 = [1,2,3]
+            const newArr = arr3.map( (ele) => {
+                return ele * ele
+                       ele ** 2
+            })
+
+            console.log(newArr)
+            console.log(arr3);
+            
+
+        // filter
+        const arr4 = [11,50,1,25,51]
+        for(var i=0; i<=arr.length; i++){
+            if(arr4[i]>25){
+                console.log(arr4[i]);
+            }
+        }
+
+        // sec way
+        for(var ele of arr4){
+            if(ele > 25){
+                console.log(ele);
+            }
+        }
+   
+        // 3rd
+        const op = arr4.map( (ele) => {
+            if(ele > 25){
+                return ele
+            }
+            }) 
+             console.log(op);
+             
+
+        
+        const filterData = arr4.filter(( ele) => {
+            return ele > 25
+        });
+        // console.log(arr4);
+        console.log(filterData);
+        
+         
+        console.log("everyData.............");
+
+        arr5 = [12,45,78,45]
+       
+        const everyData = arr5.every((ele) => {
+            return ele > 5 
+        })  
+            console.log(everyData);
+
+
+        console.log("someData.............");
+
+         const someData = arr5.some((ele) => {
+            return ele > 5 
+        })  
+            console.log(someData);
+        
+             
+        console.log("0 ke alwaa true.............");
+        if("a"){
+            console.log("true......."); 
+        }else{
+            console.log("false.........."); 
+        }
+
+         console.log("index of .............");
+         arr6 = [45,78,26,12,14]
+         console.log(arr6.indexOf(77));
+         console.log(arr6.indexOf(45));
+
+
+         console.log("includes of .............");
+         console.log(arr6.includes(77));
+         console.log(arr6.includes(45));
+
+
+         const findindexArr = arr6.findIndex((ele) => {
+                return ele == 14
+         })
+         console.log(findindexArr);
+
+
+    
+         
+    </script>
+</body>
+</html>
