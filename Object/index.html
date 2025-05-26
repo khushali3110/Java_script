@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        subject: "test",
+        grid: 9443,
+        age: 56,
+      };
+      console.log(obj.subject);
+      console.log(obj.grid);
+      console.log(obj.age);
+
+      obj.age = 45;
+      console.log(obj);
+      console.log(obj.age);
+
+      obj.course = "J.S";
+      console.log(obj);
+
+      obj.name = "khushali";
+      console.log(obj);
+
+      obj.name = "jikadra";
+      console.log(obj);
+
+      console.log(obj["subject"]);
+
+      console.log("for in.............");
+      for (var key in obj) {
+        // console.log(key);
+        // console.log(obj.key);       //undefine
+
+        console.log("key..........");
+
+        console.log(obj[key]);
+      }
+
+      console.log(obj);
+
+
+
+     
+    </script>
+  </body>
+</html>

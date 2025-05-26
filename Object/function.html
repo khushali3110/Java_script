@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const student = {
+        name: "khushali",
+        course: "full stack",
+        grid: 334,
+        age: 33,
+
+        Show: function () {
+          return `username=${student.name},course = ${student.course}, grid = ${student.grid},age = ${student.age}`
+        },
+      
+         ShowData: function () {
+          return `username=${student.name},course = ${this.course}, grid = ${this.grid},age = ${this.age}`
+        },
+
+
+         Showarrow: () => {
+          return `username=${student.name},course = ${student.course}, grid = ${student.grid},age = ${student.age}`
+        },
+
+
+        ShowDataarrow: () => {
+          return `username=${this.name},course = ${this.course}, grid = ${this.grid},age = ${this.age}`
+        },
+        
+      }
+        console.log(student.Show())+"<br>";
+        console.log(student. ShowData())+"<br>";
+        console.log(student. Showarrow())+"<br>";
+        console.log(student. ShowDataarrow())+"<br>";
+        
+    </script>
+</body>
+</html>
