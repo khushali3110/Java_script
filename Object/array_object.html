@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+       
+    <button onclick="show()">show images</button>
+    <div id="showImg"></div>
+
+    <script>
+        function show() {
+            const obj = {
+                name: "test",
+                images: ["https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    "https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    "https://images.pexels.com/photos/133081/pexels-photo-133081.jpeg?auto=compress&cs=tinysrgb&w=600",
+                ]
+            }
+            console.log(obj.images);
+            const image = obj.images
+            var output=" ";
+            image.forEach((image) => {
+                console.log(image);
+
+                output += `<img src = ${image} alt = "images" width="200" height="200"/>`
+            });
+            console.log(output);
+
+            document.getElementById("showImg").innerHTML = output
+        }
+
+
+
+        console.log("multiple method.........");
+        const arr = [
+            {
+                id:123,
+                name:"test"
+            },
+            {
+                id:122,
+                name:"abc"
+            }
+        ]
+        console.log(arr[0].id);
+        console.log(arr[0].name);
+
+        console.log("for loop......");
+        
+        
+        for(var i = 0; i < arr.length; i++){
+            console.log(arr[i].id);
+            console.log(arr[i].name);  
+        }
+
+         console.log("for each......");
+
+        arr.forEach((ele) => {
+            console.log(ele.id)
+            console.log(ele.name)
+            
+        }
+    )
+    </script>
+</body>
+
+</html>
