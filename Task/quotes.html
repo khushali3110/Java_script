@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <style>
-    .container{
-         width: 100%;
-         height: 500px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      .container {
+        width: 100%;
+        height: 500px;
+      }
 
-    #quote-ans{
+      #quote-ans {
         text-align: center;
         margin-left: 100px;
-    }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="quote-ans">answer</div>
+      <button type="btn" onclick="Quotes()">Click Me!</button>
+    </div>
+    <script>
+      const str = [
+        "Every day, in every way, I'm getting better and better.",
+        "Keep on truckin",
+        "Do not let making a living prevent you from making a life.",
+        "The greatest glory in living lies not in never falling, but in rising every time we fall",
+        "Life is either a daring adventure or nothing.",
+        "If you fell down yesterday, stand up today.",
+        "Never be limited by other people’s limited imaginations.",
+      ];
 
-  </style>
-</head>
-<body>
-
-   <div class="container">
-    <div id="quote-ans">answer</div>
-   <button type="btn" onclick="Quotes()">Click Me!</button>
-</div>
-  <script>
-    const str = [
-      "Every day, in every way, I'm getting better and better.",
-      "Keep on truckin",
-      "Do not let making a living prevent you from making a life.",
-      "The greatest glory in living lies not in never falling, but in rising every time we fall",
-      "Life is either a daring adventure or nothing.",
-      "If you fell down yesterday, stand up today.",
-      "Never be limited by other people’s limited imaginations."
-    ];
-    
-
-    function Quotes() {
-      const randomIndex  = Math.floor(Math.random() * str.length);
-      const quotes = str[randomIndex];
-      console.log(quotes); 
-      document.query("quote-ans").innerHTML = quotes;
-    }
-  </script>
-
-</body>
+      function Quotes() {
+        const randomIndex = Math.floor(Math.random() * str.length);
+        const quotes = str[randomIndex];
+        console.log(quotes);
+        document.getElementById("quote-ans").innerHTML = quotes;
+      }
+    </script>
+  </body>
 </html>
