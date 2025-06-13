@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Output</title>
+</head>
+<body>
+    <script>
+        document.write("1....................<br>");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += j + " ";
+            }
+            document.write(row + "<br>");
+        }
+
+        document.write("<br>2....................<br>");
+        for (let i = 5; i >= 1; i--) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += j + " ";
+            }
+            document.write(row + "<br>");
+        }
+
+        document.write("<br>3.....................<br>");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "* ";
+            }
+            document.write(row + "<br>");
+        }
+
+        document.write("<br>4......................<br>");
+        for (let i = 5; i >= 1; i--) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "* ";
+            }
+            document.write(row + "<br>");
+        }
+
+        document.write("<br>5......................<br>");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= 5; j++) {
+                row += "* ";
+            }
+            document.write(row + "<br>");
+        }
+
+        document.write("<br>6........................<br>");
+        for (let i = 1; i <= 5; i++) {
+            let space = "&nbsp;&nbsp;".repeat(5 - i);
+            let stars = "* ".repeat(2 * i - 1);
+            document.write(space + stars + "<br>");
+        }
+
+        document.write("<br>7.......................<br>");
+        for (let i = 5; i >= 1; i--) {
+            let space = "&nbsp;&nbsp;".repeat(5 - i);
+            let stars = "* ".repeat(2 * i - 1);
+            document.write(space + stars + "<br>");
+        }
+
+        document.write("<br>8..........................<br>");
+        // Top 
+        for (let i = 1; i <= 5; i++) {
+            let space = "&nbsp;&nbsp;".repeat(5 - i);
+            let stars = "* ".repeat(2 * i - 1);
+            document.write(space + stars + "<br>");
+        }
+        // Bottom 
+        for (let i = 4; i >= 1; i--) {
+            let space = "&nbsp;&nbsp;".repeat(5 - i);
+            let stars = "* ".repeat(2 * i - 1);
+            document.write(space + stars + "<br>");
+        }
+
+        document.write("<br>9.......................<br>");
+        for (let i = 1; i <= 5; i++) {
+            document.write("* ".repeat(i) + "<br>");
+        }
+        for (let i = 4; i >= 1; i--) {
+            document.write("* ".repeat(i) + "<br>");
+        }
+
+        document.write("<br>10.......................<br>");
+        for (let i = 1; i <= 5; i++) {
+            document.write((i + " ").repeat(i) + "<br>");
+        }
+    </script>
+</body>
+</html>
