@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1></h1>
+    </div>
+    <script>
+        setInterval(() => {
+            const date = new Date()
+            let hours = date.getHours()
+            let minutes = date.getMinutes()
+            let secounds = date.getSeconds()
+
+            if(minutes<10){
+                minutes = `0${minutes}`;
+            }
+            if(secounds<10){
+                secounds = `0${secounds}`;
+            }
+
+            // const result = `${hours}:${minutes}:${sec}`;
+            const result = [hours,minutes,secounds].join(":")
+            document.querySelector('.box h1').innerHTML = result
+        },1000);
+    </script>
+</body>
+
+</html>

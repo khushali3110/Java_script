@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+     
+<body>
+    <div class="box">
+        <h1></h1>
+    </div>
+    <script>
+        const date = new Date()
+        console.log(date);
+
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+
+        const Hours = date.getHours()
+        const Minutes = date.getMinutes()
+        const Seconds = date.getSeconds()
+        
+        console.log(`${Hours}:${Minutes}:${Seconds}`)
+        console.log([Hours,Minutes,Seconds].join(":"))
+
+        const result = [Hours,Minutes,Seconds].join(":")
+
+        document.querySelector(`.box h1`).innerHTML = result
+    </script>
+</body>
+</html>

@@ -35,7 +35,8 @@ const StringRegEx = /^[A-Za-z. ]*$/
 // const StringRegEx = /^[A-Za-z. ]{2,15}$/
 
 // const MobileRegEx = /^[0-9]{10}$/
-// const MobileRegEx = /^[6789][0-9]{9}$/
+const MobileRegEx = /^[6789][0-9]{9}$/
+
 const EmailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const PasswordRegEx = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,16}$/;

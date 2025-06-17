@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(255,94,98,0.5), rgba(12, 7, 0, 0.5)),url('https://cdn.pixabay.com/photo/2024/09/27/20/10/pantheon-paris-9079834_1280.jpg');
+            height : 100vh;
+            background-size: cover;
+            width:100%;
+            opacity: 0;
+            transition: all 2s linear;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>welcome to  rnw</h1>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('.container').style.opacity = 1;
+        },2000)
+    </script>
+</body>
+</html>
