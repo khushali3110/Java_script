@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+</head>
+<body>
+     <button onclick="save()">save</button>
+     <button onclick="show()">show</button>
+     <script>
+        function save(){
+        localStorage.setItem("name",'test333')
+        localStorage.setItem("grid",'4333')
+        localStorage.setItem("boolean",'true')
+        localStorage.setItem("array",'[34,3,4,5]')
+
+        // localStorage.setItem("object",{id:233,name:"khushali"})
+
+        const obj = {id:233,name:"khushali"}
+        localStorage.setItem("object1",JSON.stringify(obj))
+        }
+
+        function show(){
+            const std2 = localStorage.getItem("object1")
+            console.log(std2);
+            // console.log(std2.name);
+
+            const std = JSON.parse(localStorage.getItem("object1"))
+            console.log(std);
+            document.write(std.name)
+            
+            
+        }
+     </script>
+</body>
+</html>
