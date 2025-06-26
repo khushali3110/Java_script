@@ -1,4 +1,5 @@
 const signup = document.querySelector('#signup')
+let userData = JSON.parse(localStorage.getItem('userList'))
 signup.addEventListener('submit',(e)=>{
     e.preventDefault()
   
@@ -89,25 +90,103 @@ if(!address.trim()){
     address_error.innerHTML = ""
 }
 
-// ✅ ONLY MOVED THIS BLOCK INSIDE — no word changed
+
 if(StringRegEx.test(username) && 
     email &&
-     MobileRegEx.test(mobile) && 
-     password && 
-     city && 
-     gender && 
-     hobbies.length > 0 && 
-     address)
+    MobileRegEx.test(mobile) && 
+    password && 
+    city && 
+    gender && 
+    hobbies.length > 0 && 
+    address)
      {
-    let userList = JSON.parse(localStorage.getItem('userList'))  || []
+    let userList = JSON.parse(localStorage?.getItem('userList')) 
     console.log("userList....");
     console.log(userList);
     
+    let id = userList.length + 1
+    
     const user = {
-        username,email,mobile,city,gender:gender.value,hobbies:arr,address
+        id,
+        username:username,email,mobile,city,gender:gender.value,hobbies:arr,address
     }
 
     userList.push(user)
     localStorage.setItem('userList',JSON.stringify(userList))
+
+
+    alert("user added")
+    signup.reset()
+    show()
   }
 });
+ 
+function show(){
+    console.table(userData)
+    let output = "";
+    userData.forEach((user,index) => {
+        output += `
+        <tr>
+            <td>${index+1}</td>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.mobile}</td>
+            <td>${user.city}</td>
+            <td>${user.gender}</td>
+            <td>${user.hobbies}</td>
+            <td>${user.address}</td>
+            <td>
+                <button onclick = "trash(${user.id})">delete</button>
+            </td>
+        </tr>
+        `
+    })
+
+    document.querySelector("#showUser").innerHTML = output
+}
+show()
+
+
+// function trash(id) {
+//     alert(id)
+//     const index = userData.findIndex((user) => {
+//         return user.id == id
+//     })
+//     alert(index)
+//     userData.splice(index,1)
+//     console.log(userData);
+//     localStorage.setItem('userList',JSON.stringify(userData))
+//     show()
+// }
+
+//------------ or ---------------------
+function trash(id) {
+    const filterData = userData.filter((user) => {
+        return user.id!==id
+    })
+    console.log(filterData);
+    localStorage.setItem('userList',JSON.stringify(filterData))
+    show()
+}
+
+
+// just explaination
+// const arr = [12,4,5,6,6]
+// console.log(arr.indexOf(6));
+
+
+// const arrObj = [
+//     {
+//         id: 121,
+//         name: "test"
+//     },
+//     {
+//         id: 231,
+//         name: "test2"
+//     }
+// ]
+
+// const index = arrObj.findIndex((ele) => {
+//     return ele.id == 121
+// })
+// console.log(index);
