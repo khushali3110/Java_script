@@ -1,19 +1,19 @@
 const productInfo = document.querySelector("#productInfo");
 
-productList = JSON.parse(localStorage.getItem('productList'));
+productList = JSON.parse(localStorage.getItem("productList"));
 
 productInfo.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const category = document.querySelector('#category').value;
-  const p_name = document.querySelector('#p_name').value;
-  const p_price = document.querySelector('#p_price').value;
-  const p_url = document.querySelector('#p_url').value;
+  const category = document.querySelector("#category").value;
+  const p_name = document.querySelector("#p_name").value;
+  const p_price = document.querySelector("#p_price").value;
+  const p_url = document.querySelector("#p_url").value;
 
-  console.log(category)
-  console.log(p_name)
-  console.log(p_price)
-  console.log(p_url)
+  console.log(category);
+  console.log(p_name);
+  console.log(p_price);
+  console.log(p_url);
 
   const arr = productList || [];
   const id = arr.length + 1;
@@ -72,14 +72,29 @@ function show() {
         </div>
         </div>
         `;
+
+
+
+
   });
+
+
+
   document.querySelector("#showProduct").innerHTML = output;
-}show();
+}
+show();
+
+
+
 
 
 function trash(id) {
+
+
   if (confirm("do you want to delete this product?")) {
+
     const filterProduct = productList.filter((product) => {
+
       return product.id !== id;
     });
     console.log(filterProduct);
@@ -88,7 +103,6 @@ function trash(id) {
     show();
   }
 }
-
 
 function update(id) {
   document.querySelector("#submit").style.display = "none";
@@ -99,19 +113,16 @@ function update(id) {
   });
   console.log(singleUser);
 
-  const category = document.querySelector('#category');
-  const p_name = document.querySelector('#p_name');
-  const p_price = document.querySelector('#p_price');
-  const p_url = document.querySelector('#p_url');
-
-  
+  const category = document.querySelector("#category");
+  const p_name = document.querySelector("#p_name");
+  const p_price = document.querySelector("#p_price");
+  const p_url = document.querySelector("#p_url");
 
   // alert(id)
   category.value = singleUser.category;
   p_name.value = singleUser.p_name;
   p_price.value = singleUser.p_price;
   p_url.value = singleUser.p_url;
- 
 
   document.querySelector("#update").addEventListener("click", () => {
     alert("update.........");
@@ -135,34 +146,38 @@ function update(id) {
   });
 }
 
-
-
-function addToCart(id){
-
-  alert("product add to cart")
+function addToCart(id) {
+  alert("product add to cart");
 
   const singleProduct = productList.find((product) => {
-      return product.id === id
-  })
+    return product.id === id;
+  });
 
-  let cartList = JSON.parse(localStorage.getItem('cartList')) || []
+  let cartList = JSON.parse(localStorage.getItem("cartList")) || [];
 
   const singlecart = cartList.find((cart) => {
-        return cart.id === id
-  })
+    return cart.id === id;
+  });
 
-  if(singlecart){
-    singlecart.count += 1
-  }else{
+  if (singlecart) {
+    singlecart.count += 1;
+  } else {
     const newCart = {
-        ...singleProduct,
-        count: 1,
-    }
+      ...singleProduct,
+      count: 1,
+    };
 
-    cartList.push(newCart)
+    cartList.push(newCart);
   }
 
-  localStorage.setItem('cartList',JSON.stringify(cartList))
+  localStorage.setItem("cartList", JSON.stringify(cartList));
 
-  console.log(singlecart)
+  console.log(singlecart);
 }
+
+
+function countCart(){
+  const cartList = JSON.parse(localStorage.getItem('cartList'))
+   document.querySelector('#cartcount').innerHTML = cartList.length;
+}
+countCart()
