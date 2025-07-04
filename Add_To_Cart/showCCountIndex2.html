@@ -27,6 +27,7 @@
             align-items: center;
             margin-left: 55px;
             color: aliceblue;
+            margin-left: 60px;
         }
 
        .btn{
@@ -59,18 +60,29 @@
            
         }
 
-        .fa-solid{
-            font-size: 35px;
+        .show{
+            font-size: 55px;
+            margin-left: 45px;
+            margin-top: 55px;
+        }
 
+        #cartcount{
+            font-size: 35px;
+            margin-left: 10px;
+            color: black;
+            text-decoration: none;
         }
 
 
     </style>
 </head>
 <body>
-    <div class=" text-center py-5 ">
-        <a href="./showCart2.html" ><i class="fa-solid fa-cart-shopping"></i>
-        <span id="cartcount"></span>
+    <div class=" text-center">
+        <a href="./showCartCount2.html">
+            <div class="show"><i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartcount"></span>
+                <span id="qtyCount"></span></div>
+        
     </a>
     </div>
 
@@ -95,14 +107,14 @@
             <input type="url" class="form-control"  id="p_url" placeholder="enter product url">
         </div>
          <div class="mt-4">
-           <button id = "submit" class="btn btn-success">Submit</button>
-           <button type="button" id = "update" class="btn btn-info">Update</button>
+           <button id = "submit" class="btn btn-outline-success">Submit</button>
+           <button type="button" id = "update" class="btn btn-outline-danger">Update</button>
         </div>
     </form>
    </div>
    <div class="container my-5">
         <div class="row" id="showProduct"></div>
    </div>
-   <script src="ShowCart2.js"></script>
+   <script src="./ShowCartCount2.js"></script>
 </body>
 </html>
