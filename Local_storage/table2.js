@@ -100,7 +100,7 @@ signup.addEventListener("submit", (e) => {
     address
   ) {
 
-    let userList = userData || [];
+    let userList = JSON.parse(localStorage.getItem("userList")) || [];
 
 
     console.log("userList....");
