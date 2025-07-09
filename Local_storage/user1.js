@@ -92,7 +92,7 @@ if(!address.trim()){
 }
 
 
-if(StringRegEx.test(username) && 
+if(StringRegEx.tes(username) && 
     email &&
      MobileRegEx.test(mobile) && 
      password && 
@@ -101,7 +101,7 @@ if(StringRegEx.test(username) &&
      hobbies.length > 0 && 
      address)
      {
-    let userList = JSON.parse(localStorage.getItem('userList'))  || []
+    let userList = userData || []
     console.log("userList....");
     console.log(userList);
     
