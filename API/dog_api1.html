@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Count API</title>
+</head>
+<body>
+
+  <input type="number" id="dogCount" placeholder="Enter number of dogs" />
+  <button onclick="Dogs()">Show Dogs</button>
+
+  <div id="showApi" style="margin-top: 20px;"></div>
+
+  <script>
+    function Dogs() {
+        
+      const count = document.querySelector('#dogCount').value;
+
+      fetch(`https://dog.ceo/api/breeds/image/random/${count}`)  
+        .then(res => res.json())
+        .then(data => {
+          const images = data.message;
+          let output = "";
+
+          images.forEach((img) => {
+            output += `<img src="${img}" width="200" height="200" style="margin:10px;">`;
+          });
+
+          document.querySelector('#showApi').innerHTML = output;
+        });
+    }
+  </script>
+
+</body>
+</html>
