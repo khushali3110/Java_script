@@ -14,6 +14,9 @@
     </div>
 
 
+   
+
+
 </body>
 
 
@@ -42,14 +45,13 @@
                             alt="${movie.title}">
                             <div class="card-body">
                                 <h5 class="card-title">${movie.title}</h5>
-                                <ul">
-                                    <li> ${movie.rating}</li>
-                                    <li> ${movie.rank}</li>
-                                    <li> ${movie.year}</li>
-                                    <li> ${movie.genre.join(", ")}</li>
+                                <ul class="list-unstyled">
+                                    <li><strong>Rating:</strong> ${movie.rating}</li>
+                                    <li><strong>Rank:</strong> ${movie.rank}</li>
+                                    <li><strong>Year:</strong> ${movie.year}</li>
+                                    <li><strong>Genres:</strong> ${movie.genre.join(", ")}</li>
                                 </ul>
-                                <a href="${movie.imdb_link}" target="_blank">
-                                    Read More</a>
+                                <a href="${movie.imdb_link}" target="_blank" class="btn btn-primary btn-sm">Read More</a>
                             </div>
                         </div>
                     </div>`;
